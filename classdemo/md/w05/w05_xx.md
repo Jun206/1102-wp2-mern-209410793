@@ -17,3 +17,11 @@
 ### P4: Landing_xx styled components with Responsive Design
 
 ![w05/p4.png](p4.png)
+
+### P5: push w05 files to Github, and show w05_xx.md
+
+![w05/p5.png](p5.png)
+
+### P6: Share your Github repo to htchung and jerry7657
+
+![w05/p6.png](p6.png)
