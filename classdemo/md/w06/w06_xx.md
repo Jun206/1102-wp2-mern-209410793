@@ -5,3 +5,7 @@
 ### P2: setup routes / for Dashboard, /landing for Landing page, /register for Register page
 
 ![](p2.png)
+
+### w6-P3: implement 404 not found page
+
+![](w6-p3.png)
