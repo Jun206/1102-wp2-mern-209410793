@@ -11,3 +11,8 @@
 
 ![](w08-p3.png)
 ![](w08-p3-1.png)
+
+### W08-P4 displayAlert in Register_xx.js, show state in AppProvider_xx
+
+![](w08-p4.png)
+![](w08-p4-1.png)
