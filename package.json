@@ -1,0 +1,28 @@
+{
+  "name": "1102-wp2-mern-id",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server_xx.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server_xx.js",
+    "dev": "nodemon server_xx.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htchung/1102-wp2-mern-id.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/htchung/1102-wp2-mern-id/issues"
+  },
+  "homepage": "https://github.com/htchung/1102-wp2-mern-id#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
