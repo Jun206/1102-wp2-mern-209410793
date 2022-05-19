@@ -10,6 +10,12 @@
 
 ![](w13-p2.png)
 
+### w13-p3: hash password using bcryptjs
+
+![](w13-p3-1.png)
+
+![](w13-p3-2.png)
+
 ### p13-last-log
 
 ```
