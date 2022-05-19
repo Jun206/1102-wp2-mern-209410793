@@ -1,5 +1,11 @@
+import User_xx from '../models/User_xx.js';
+
 const register_xx = async (req, res) => {
-  res.send('register user -- Hsingtai, 123456789');
+  console.log('body', req.body);
+  const user = await User_xx.create(req.body);
+  res.status(201).json({ user });
+
+  // res.send('register user -- Hsingtai, 123456789');
 };
 
 const login_xx = async (req, res) => {
