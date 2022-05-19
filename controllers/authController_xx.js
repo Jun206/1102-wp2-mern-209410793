@@ -4,7 +4,8 @@ const register_xx = async (req, res, next) => {
   try {
     console.log('body', req.body);
     const user = await User_xx.create(req.body);
-    res.status(201).json({ user });
+    const token = user.createJWT();
+    res.status(201).json({ user, token });
   } catch (err) {
     // res.status(500).json({ msg: 'Error on registering user' });
     next(err);

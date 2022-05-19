@@ -16,6 +16,12 @@
 
 ![](w13-p3-2.png)
 
+### w13-p4: create jwt token using bcryptjs
+
+![](w13-p4-1.png)
+
+![](w13-p4-2.png)
+
 ### p13-last-log
 
 ```
