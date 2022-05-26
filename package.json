@@ -5,7 +5,9 @@
   "main": "server_xx.js",
   "type": "module",
   "scripts": {
-    "start": "node server_xx.js",
+    "server": "nodemon server_xx.js --ignore client_xx",
+    "client": "npm start --prefix client_xx ",
+    "start": "concurrently --kill-others-on-fail \" npm run server \" \" npm run client \" ",
     "dev": "nodemon server_xx.js"
   },
   "repository": {
@@ -23,11 +25,16 @@
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "express-async-errors": "^3.1.1",
+    "http-proxy-middleware": "^2.0.6",
+    "http-status-codes": "^2.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.11",
+    "morgan": "^1.10.0",
     "validator": "^13.7.0"
   },
   "devDependencies": {
+    "concurrently": "^7.2.1",
     "nodemon": "^2.0.15"
   }
 }

@@ -1,15 +1,22 @@
 import User_xx from '../models/User_xx.js';
+import { StatusCodes } from 'http-status-codes';
 
 const register_xx = async (req, res, next) => {
-  try {
-    console.log('body', req.body);
-    const user = await User_xx.create(req.body);
-    const token = user.createJWT();
-    res.status(201).json({ user, token });
-  } catch (err) {
-    // res.status(500).json({ msg: 'Error on registering user' });
-    next(err);
-  }
+
+  console.log('body', req.body);
+  const user = await User_xx.create(req.body);
+  const token = user.createJWT();
+  res.status(StatusCodes.CREATED).json({ user, token });
+
+  // add express-async-errors, remove try catch block
+  // try {
+  //   console.log('body', req.body);
+  //   const user = await User_xx.create(req.body);
+  //   const token = user.createJWT();
+  //   res.status(201).json({ user, token });
+  // } catch (err) {
+  //   next(err);
+  // }
 
   // res.send('register user -- Hsingtai, 123456789');
 };

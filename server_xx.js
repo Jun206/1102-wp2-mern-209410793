@@ -8,6 +8,10 @@ const app = express();
 import dotenv from 'dotenv';
 dotenv.config();
 
+import 'express-async-errors'
+
+import morgan from 'morgan'
+
 // db and authenticateUser
 import connectDB_xx from './db/connect_xx.js';
 
@@ -18,11 +22,15 @@ import authRoutes_xx from './routes/authRoutes_xx.js';
 import notFoundMiddleware_xx from './middleware/not-found_xx.js';
 import errorHandlerMiddleware_xx from './middleware/error-handler_xx.js';
 
+if (process.env.NODE_ENV !== 'production') {
+  app.use(morgan('dev'));
+}
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
   //   throw new Error('testing for error');
-  res.send('Welcome htchung 123456789');
+  res.send('Welcome -- htchung 123456789');
 });
 
 app.use('/api/v1/auth_xx', authRoutes_xx);
