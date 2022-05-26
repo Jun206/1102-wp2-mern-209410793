@@ -23,10 +23,10 @@
   "homepage": "https://github.com/htchung/1102-wp2-mern-id#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "express-async-errors": "^3.1.1",
-    "http-proxy-middleware": "^2.0.6",
     "http-status-codes": "^2.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.11",

@@ -16,7 +16,7 @@ const initialState = {
 const Register_xx = () => {
   const [values, setValues] = useState(initialState);
 
-  const { showAlert, displayAlert } = useAppContext();
+  const { showAlert, displayAlert, registerUser } = useAppContext();
 
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
@@ -29,12 +29,27 @@ const Register_xx = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    const { name, email, password, isMember } = values;
     // console.log('e.target', e.target);
-    const { email, password } = values;
-    if (!email || !password) {
+    if (!email || !password || !isMember && !name) {
       displayAlert();
       return;
     }
+
+    const currentUser = { name, email, password };
+    if (!isMember) {
+      registerUser({
+        currentUser,
+        endPoint: 'register_xx',
+        alertText: 'User created! Redirecting ...'
+      });
+    } else {
+
+    }
+
+
+
+
   };
 
   return (
