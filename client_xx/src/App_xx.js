@@ -7,6 +7,7 @@ import {
   Register_xx,
   Error_xx,
   TestFetchUseCors_xx,
+  TestFetchUseProxy_xx,
 } from './pages';
 import styled from 'styled-components';
 
@@ -18,6 +19,7 @@ function App_xx() {
         <Route path='/landing' element={<Landing_xx />} />
         <Route path='/register' element={<Register_xx />} />
         <Route path='/testcors' element={<TestFetchUseCors_xx />} />
+        <Route path='/testproxy' element={<TestFetchUseProxy_xx />} />
         <Route path='*' element={<Error_xx />} />
       </Routes>
       {/* <Landing_xx /> */}

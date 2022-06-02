@@ -36,6 +36,10 @@ app.get('/', (req, res) => {
   res.json({ msg: 'Welcome -- htchung 123456789' });
 });
 
+app.get('/api/v1', (req, res) => {
+  res.json({ msg: 'API v1 -- htchung 123456789' });
+});
+
 app.use('/api/v1/auth_xx', authRoutes_xx);
 
 app.use(notFoundMiddleware_xx);
