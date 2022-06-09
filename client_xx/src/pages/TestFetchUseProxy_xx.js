@@ -21,9 +21,9 @@ const TestFetchUseProxy_xx = () => {
 
   const fetchData3 = async () => {
     const currentUser = {
-      name: 'htchung21',
-      email: 'htchung21@gms.tku.edu.tw',
-      password: 'secret21',
+      name: 'htc',
+      email: 'htc@gmail.com',
+      password: '135975',
     };
 
     try {

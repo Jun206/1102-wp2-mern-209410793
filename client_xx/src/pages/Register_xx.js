@@ -23,7 +23,7 @@ const Register_xx = () => {
   };
 
   const handleChange = (e) => {
-    console.log('e.target', e.target);
+    // console.log('e.target', e.target);
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
@@ -31,25 +31,21 @@ const Register_xx = () => {
     e.preventDefault();
     const { name, email, password, isMember } = values;
     // console.log('e.target', e.target);
-    if (!email || !password || !isMember && !name) {
+    if (!email || !password || (!isMember && !name)) {
       displayAlert();
       return;
     }
 
     const currentUser = { name, email, password };
+    console.log('form data', currentUser);
     if (!isMember) {
       registerUser({
         currentUser,
         endPoint: 'register_xx',
-        alertText: 'User created! Redirecting ...'
+        alertText: 'User created! Redirecting ...',
       });
     } else {
-
     }
-
-
-
-
   };
 
   return (

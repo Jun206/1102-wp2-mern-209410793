@@ -2,11 +2,12 @@ import User_xx from '../models/User_xx.js';
 import { StatusCodes } from 'http-status-codes';
 
 const register_xx = async (req, res, next) => {
-
   console.log('body', req.body);
   const user = await User_xx.create(req.body);
   const token = user.createJWT();
-  res.status(StatusCodes.CREATED).json({ user, token });
+  res
+    .status(StatusCodes.CREATED)
+    .json({ user, token, location: user.location });
 
   // add express-async-errors, remove try catch block
   // try {
