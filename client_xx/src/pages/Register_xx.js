@@ -4,6 +4,7 @@ import Wrapper from '../assets/wrappers/Register_xx';
 
 import { useAppContext } from '../context/appContext_xx';
 import Alert_xx from '../components/Alert_xx';
+import { LOGIN_USER_BEGIN } from '../context/action_xx';
 
 const initialState = {
   name: '',
@@ -16,7 +17,7 @@ const initialState = {
 const Register_xx = () => {
   const [values, setValues] = useState(initialState);
 
-  const { showAlert, displayAlert, registerUser } = useAppContext();
+  const { showAlert, displayAlert, registerUser, loginUser } = useAppContext();
 
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
@@ -45,6 +46,11 @@ const Register_xx = () => {
         alertText: 'User created! Redirecting ...',
       });
     } else {
+      loginUser({
+        currentUser,
+        endPoint: 'login_xx',
+        alertText: 'Login Successful! Redirecting ...',
+      });
     }
   };
 

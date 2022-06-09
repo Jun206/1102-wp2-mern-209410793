@@ -6,6 +6,10 @@
 
 ![](w16-p1-2.png)
 
+### w16-p2: loginUser from client to server, test connection okay
+
+![](w16-p2.png)
+
 ### p16-last-log
 
 ```
