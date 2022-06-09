@@ -10,6 +10,10 @@
 
 ![](w16-p2.png)
 
+### w16-p3: in server, check email and password for credentials, okay then return {user, token, location}
+
+![](w16-p3.png)
+
 ### p16-last-log
 
 ```

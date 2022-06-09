@@ -98,11 +98,11 @@ const AppProvider_xx = ({ children }) => {
         alertText,
       });
       console.log('login data', data);
-      // const { user, token, location } = data;
-      // dispatch({
-      //   type: LOGIN_USER_SUCCESS,
-      //   payload: { user, token, location, alertText },
-      // });
+      const { user, token, location } = data;
+      dispatch({
+        type: LOGIN_USER_SUCCESS,
+        payload: { user, token, location, alertText },
+      });
     } catch (error) {
       dispatch({
         type: LOGIN_USER_ERROR,
