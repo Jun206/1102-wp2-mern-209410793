@@ -53,7 +53,29 @@ const login_xx = async (req, res) => {
 };
 
 const updateUser_xx = async (req, res) => {
-  res.send('Update user -- Hsingtai, 123456789');
+  const { email, name, lastName, location, password } = req.body;
+  if (!email || !name || !lastName || !location || !password) {
+    throw new BadRequestError('Please provide all values');
+  }
+
+  console.log('body', req.body);
+  console.log('_id', req.user.userId);
+  const user = await User_xx.findOne({ _id: req.user.userId });
+
+  user.email = email;
+  user.name = name;
+  user.lastName = lastName;
+  user.location = location;
+  user.password = password;
+
+  console.log('user', user);
+
+  await user.save();
+
+  const token = user.createJWT();
+
+  res.status(StatusCodes.OK).json({ user, token, location: user.location });
+  // res.send('Update user -- Hsingtai, 123456789');
 };
 
 export { register_xx, login_xx, updateUser_xx };

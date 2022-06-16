@@ -16,6 +16,16 @@
 
 ![](w17-p3-2.png)
 
+### w17-p4: server authentication and updateUser
+
+![](w17-p4-1.png)
+
+![](w17-p4-2.png)
+
+![](w17-p4-3.png)
+
+![](w17-p4-4.png)
+
 ### p17-last-log
 
 ```
