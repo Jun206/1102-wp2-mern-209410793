@@ -12,6 +12,7 @@ import {
   LOGIN_USER_BEGIN,
   LOGIN_USER_SUCCESS,
   LOGIN_USER_ERROR,
+  LOGOUT_USER,
 } from './action_xx';
 
 const initialState = {
@@ -19,10 +20,14 @@ const initialState = {
   showAlert: false,
   alterText: '',
   alterType: '',
-  user: '',
-  token: '',
+  user: null,
+  token: null,
   location: '',
 };
+
+const token = localStorage.getItem('token');
+const user = localStorage.getItem('user');
+const userLocation = localStorage.getItem('location');
 
 const AppContext_xx = React.createContext();
 
@@ -38,6 +43,18 @@ const AppProvider_xx = ({ children }) => {
     setTimeout(() => {
       dispatch({ type: CLEAR_ALERT });
     }, 3000);
+  };
+
+  const addUserToLocalStorage = ({ user, token, location }) => {
+    localStorage.setItem('user', JSON.stringify(user));
+    localStorage.setItem('token', token);
+    localStorage.setItem('location', location);
+  };
+
+  const removeUserFromLocalStorage = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    localStorage.removeItem('location');
   };
 
   const axiosRegister = async ({ currentUser, endPoint, alertText }) => {
@@ -67,6 +84,7 @@ const AppProvider_xx = ({ children }) => {
         type: REGISTER_USER_SUCCESS,
         payload: { user, token, location, alertText },
       });
+      addUserToLocalStorage({ user, token, location });
     } catch (error) {
       dispatch({
         type: REGISTER_USER_ERROR,
@@ -103,6 +121,7 @@ const AppProvider_xx = ({ children }) => {
         type: LOGIN_USER_SUCCESS,
         payload: { user, token, location, alertText },
       });
+      addUserToLocalStorage({ user, token, location });
     } catch (error) {
       dispatch({
         type: LOGIN_USER_ERROR,
@@ -112,9 +131,21 @@ const AppProvider_xx = ({ children }) => {
     clearAlert();
   };
 
+  const logoutUser = async () => {
+    dispatch({ type: LOGOUT_USER });
+    removeUserFromLocalStorage();
+  };
+
   return (
     <AppContext_xx.Provider
-      value={{ ...state, displayAlert, clearAlert, registerUser, loginUser }}
+      value={{
+        ...state,
+        displayAlert,
+        clearAlert,
+        registerUser,
+        loginUser,
+        logoutUser,
+      }}
     >
       {children}
     </AppContext_xx.Provider>
