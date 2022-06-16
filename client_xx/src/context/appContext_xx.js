@@ -13,6 +13,7 @@ import {
   LOGIN_USER_SUCCESS,
   LOGIN_USER_ERROR,
   LOGOUT_USER,
+  TOGGLE_SIDEBAR,
 } from './action_xx';
 
 const initialState = {
@@ -23,6 +24,7 @@ const initialState = {
   user: null,
   token: null,
   location: '',
+  showSidebar: false,
 };
 
 const token = localStorage.getItem('token');
@@ -136,6 +138,10 @@ const AppProvider_xx = ({ children }) => {
     removeUserFromLocalStorage();
   };
 
+  const toggleSidebar = async () => {
+    dispatch({ type: TOGGLE_SIDEBAR });
+  };
+
   return (
     <AppContext_xx.Provider
       value={{
@@ -145,6 +151,7 @@ const AppProvider_xx = ({ children }) => {
         registerUser,
         loginUser,
         logoutUser,
+        toggleSidebar,
       }}
     >
       {children}

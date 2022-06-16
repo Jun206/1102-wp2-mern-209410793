@@ -10,6 +10,12 @@
 
 ![](w17-p2-2.png)
 
+### w17-p3: toggle sidebar (SmallSidebar and BigSidebar)
+
+![](w17-p3-1.png)
+
+![](w17-p3-2.png)
+
 ### p17-last-log
 
 ```
