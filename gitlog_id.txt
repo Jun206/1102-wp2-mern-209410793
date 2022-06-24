@@ -1,0 +1,32 @@
+66f6d5d	Jun206	Fri Jun 24 19:56:03 2022 +0800	Initial commit
+ee1ca2c	htchung	Thu Jun 16 21:48:03 2022 +0800	finish w17 demo
+4e19987	htchung	Thu Jun 16 21:47:00 2022 +0800	w17-p4: server authentication and updateUser
+905d1da	htchung	Thu Jun 16 20:55:27 2022 +0800	w17-p3: toggle sidebar (SmallSidebar and BigSidebar)
+93b41df	htchung	Thu Jun 16 20:31:10 2022 +0800	w17-p2: implement logout user, remove local stroage data
+f8271ee	htchung	Thu Jun 16 19:32:20 2022 +0800	w17-p1: after login in, direct to protected route of dashboard
+e4a3274	htchung	Thu Jun 9 21:49:41 2022 +0800	w16-p3: in server, check email and password for credentials, okay then return {user, token, location}
+9c60c45	htchung	Thu Jun 9 20:51:46 2022 +0800	w16-p2: loginUser from client to server, test connection okay
+96b0f46	htchung	Thu Jun 9 19:51:27 2022 +0800	w16-p1: registerUser okay, save { user, token, location} in appContext
+f865f42	htchung	Thu Jun 2 21:53:17 2022 +0800	apply useEffect() to finish TestFetchUseCors_xx.js and TestFetchUseProxy_xx.js
+61dc6cd	htchung	Thu Jun 2 21:36:57 2022 +0800	w15-p2: client /testproxy to test TestFetchUseProxy_xx.js
+82ed15d	htchung	Thu Jun 2 19:29:07 2022 +0800	w15-p1: client /testcore to test TestFetchUseCors_xx.js
+2440840	htchung	Thu May 26 21:15:32 2022 +0800	w14 classdemo end, need fix
+bbf2cd5	htchung	Thu May 26 20:13:38 2022 +0800	w14-p3: run server and client concurrently
+c0a58d2	htchung	Thu May 19 21:36:49 2022 +0800	w13-p4: create jwt token using bcryptjs~
+ed5cc20	htchung	Thu May 19 21:07:18 2022 +0800	w13-p3: hash password using bcryptjs
+3129ea4	htchung	Thu May 19 20:26:57 2022 +0800	w13-p2: use validator package to check email, error sent to error-handler_xx.js
+a14cb11	htchung	Thu May 19 19:23:53 2022 +0800	w13-p1: create a user and save it into MongoDB, collection User_xx
+41e94de	htchung	Thu May 12 21:22:07 2022 +0800	w12-LAST-LOG
+0b2f56b	htchung	Thu May 12 21:13:03 2022 +0800	w12-p3 Use postman to test route /api/v1/auth_xx/register_xx
+9e6dcea	htchung	Thu May 12 19:55:08 2022 +0800	w12-p2-1 test for notFoundMiddleware_xx.js, and w12-p2-2 test for errorHandlerMiddleware_xx.js
+7828f9a	htchung	Thu May 12 19:10:54 2022 +0800	w12-p1 switch Register and Login
+6bfbbf2	htchung	Thu Apr 14 21:26:26 2022 +0800	w08 step record
+a69ae16	htchung	Thu Apr 14 21:20:55 2022 +0800	W08-P4 displayAlert in Register_xx.js, show state in AppProvider_xx
+295d31a	htchung	Thu Apr 14 20:02:20 2022 +0800	W08-P2 connect MongoDB server, W08-P3 Use MongoCompass to create database demo_xx and collection user, enter one document that has your name and sid
+18fcfc7	htchung	Thu Apr 14 19:08:08 2022 +0800	W08-P1 create a express web server with route /
+1cf45a2	htchung	Thu Mar 31 21:10:44 2022 +0800	w6-P4 md description
+d144f6a	htchung	Thu Mar 31 21:09:25 2022 +0800	w6-P4: Test e.target on Form fields (name, email, password)
+ed63fa9	htchung	Thu Mar 31 19:47:31 2022 +0800	 w6-P3: implement 404 not found page
+90fa5c9	htchung	Thu Mar 31 19:24:42 2022 +0800	P1, P2 -- logo, photo, 3 routes
+1f650b8	htchung	Thu Mar 24 21:23:40 2022 +0800	add p5.png and p6.png
+6a2273e	htchung	Thu Mar 24 21:15:38 2022 +0800	w05 files
