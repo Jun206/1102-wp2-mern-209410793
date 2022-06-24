@@ -2,13 +2,13 @@
   "name": "1102-wp2-mern-id",
   "version": "1.0.0",
   "description": "",
-  "main": "server_xx.js",
+  "main": "server_93.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon server_xx.js --ignore client_xx",
-    "client": "npm start --prefix client_xx ",
+    "server": "nodemon server_93.js --ignore client_93",
+    "client": "npm start --prefix client_93 ",
     "start": "concurrently --kill-others-on-fail \" npm run server \" \" npm run client \" ",
-    "dev": "nodemon server_xx.js"
+    "dev": "nodemon server_93.js"
   },
   "repository": {
     "type": "git",
@@ -21,20 +21,25 @@
     "url": "https://github.com/htchung/1102-wp2-mern-id/issues"
   },
   "homepage": "https://github.com/htchung/1102-wp2-mern-id#readme",
+  "devDependencies": {
+    "concurrently": "^6.4.0",
+    "nodemon": "^2.0.15"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
-    "http-status-codes": "^2.2.0",
+    "express-mongo-sanitize": "^2.1.0",
+    "express-rate-limit": "^6.0.4",
+    "helmet": "^5.0.1",
+    "http-status-codes": "^2.1.4",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.2.11",
+    "moment": "^2.29.1",
+    "mongoose": "^6.0.13",
     "morgan": "^1.10.0",
-    "validator": "^13.7.0"
-  },
-  "devDependencies": {
-    "concurrently": "^7.2.1",
-    "nodemon": "^2.0.15"
+    "validator": "^13.7.0",
+    "xss-clean": "^0.1.1"
   }
 }
